@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -30,12 +33,20 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-dark-300 min-h-screen font-sans antialiased",
+          "bg-theme min-h-screen font-sans antialiased",
           inter.variable,
           sans.variable,
         )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
