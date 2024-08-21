@@ -87,13 +87,13 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
       );
     case FormFieldType.DATE_PICKER:
       return (
-        <div className="flex rounded-md border border-dark-500 bg-dark-400">
+        <div className="flex rounded-md border border-dark-700 bg-white dark:border-dark-500 dark:bg-dark-400">
           <Image
             src="/assets/icons/calendar.svg"
             height={24}
             width={24}
             alt="user"
-            className="ml-2"
+            className="ml-2 invert dark:invert-0"
           />
           <FormControl>
             <ReactDatePicker

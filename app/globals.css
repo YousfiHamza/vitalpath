@@ -61,7 +61,7 @@
   }
 
   .sub-header {
-    @apply text-18-bold md:text-24-bold;
+    @apply text-24-bold md:text-32-bold text-slate-800 dark:text-slate-300;
   }
 
   .container {
@@ -73,7 +73,7 @@
   }
 
   .side-img {
-    @apply hidden object-cover md:block;
+    @apply hidden h-screen object-cover md:block;
   }
 
   .copyright {
@@ -104,16 +104,16 @@
 
   /* ==== FORM */
   .radio-group {
-    @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed border-dark-500 bg-dark-400 p-3;
+    @apply flex h-full flex-1 items-center gap-2 rounded-md border border-dashed border-dark-700 bg-white p-3 dark:border-dark-500 dark:bg-dark-400;
   }
 
   .checkbox-label {
-    @apply cursor-pointer text-sm font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
+    @apply cursor-pointer text-sm font-medium text-dark-600 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 dark:text-dark-700 md:leading-none;
   }
 
   /* ==== File Upload */
   .file-upload {
-    @apply text-12-regular flex cursor-pointer flex-col items-center justify-center gap-3 rounded-md border border-dashed border-dark-500 bg-dark-400 p-5;
+    @apply text-12-regular flex cursor-pointer flex-col items-center justify-center gap-3 rounded-md border border-dashed border-dark-700 bg-white p-5 dark:border-dark-500 dark:bg-dark-400;
   }
 
   .file-upload_label {
@@ -219,7 +219,7 @@
   }
 
   .shad-textArea {
-    @apply bg-white focus-visible:ring-0 focus-visible:ring-offset-0 dark:border-dark-500 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
+    @apply border-dark-700 bg-white focus-visible:ring-0 focus-visible:ring-offset-0 dark:border-dark-500 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
   }
 
   .shad-combobox-item {
@@ -231,11 +231,11 @@
   }
 
   .shad-select-trigger {
-    @apply h-11 placeholder:text-dark-600 focus:ring-0 focus:ring-offset-0 dark:border-dark-500 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
+    @apply h-11 border-dark-700 bg-white placeholder:text-dark-600 focus:ring-0 focus:ring-offset-0 dark:border-dark-500 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
   }
 
   .shad-select-content {
-    @apply dark:border-dark-500 dark:bg-dark-400 !important;
+    @apply border-dark-700 bg-white dark:border-dark-500 dark:bg-dark-400 !important;
   }
 
   .shad-dialog {
@@ -285,7 +285,7 @@
 
   /* =====  REACT DATE PICKER OVERRIDES */
   .date-picker {
-    @apply text-14-medium h-11 w-full overflow-hidden rounded-md border-transparent px-3 outline-none placeholder:text-dark-600 !important;
+    @apply text-14-medium h-11 w-full overflow-hidden rounded-md border-transparent bg-white px-3 outline-none placeholder:text-dark-600 dark:bg-dark-400 !important;
   }
 }
 
@@ -302,36 +302,35 @@
 .react-datepicker__day-name,
 .react-datepicker__day,
 .react-datepicker-time__header {
-  background-color: #1a1d21 !important;
-  border-color: #363a3d !important;
-  color: #abb8c4 !important;
+  @apply bg-white dark:bg-dark-400 !important;
+  @apply border-dark-700 dark:border-dark-500 !important;
+  @apply text-black dark:text-white !important;
+}
+
+.react-datepicker__day {
+  @apply font-light !important;
+  @apply hover:bg-slate-300 hover:text-white hover:dark:text-slate-900 !important;
 }
 
 .react-datepicker__current-month,
 .react-datepicker__day-name,
 .react-datepicker-time__header {
-  color: #ffffff !important;
+  @apply text-black dark:text-slate-300 !important;
 }
 
-.react-datepicker__triangle {
-  fill: #1a1d21 !important;
-  color: #1a1d21 !important;
-  stroke: #1a1d21 !important;
-}
-
-.react-datepicker__time-list-item:hover {
-  background-color: #363a3d !important;
+.react-datepicker__time-list-item {
+  @apply hover:bg-white hover:dark:bg-dark-400 !important;
 }
 
 .react-datepicker__input-container input {
-  background-color: #1a1d21 !important;
+  @apply bg-white dark:bg-dark-400 !important;
   width: 100%;
   outline: none;
 }
 
 .react-datepicker__day--selected {
-  background-color: #24ae7c !important;
-  color: #ffffff !important;
+  @apply bg-green-500 dark:bg-green-400 !important;
+  @apply font-bold text-white hover:text-white dark:hover:text-white !important;
   border-radius: 4px;
 }
 
@@ -346,6 +345,10 @@
 .react-datepicker__time-list-item {
   display: flex !important;
   align-items: center !important;
+}
+
+.react-datepicker__day--today {
+  @apply font-bold !important;
 }
 
 /* =====  REACT PHONE NUMBER INPUT OVERRIDES */
