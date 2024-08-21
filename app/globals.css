@@ -211,15 +211,15 @@
   }
 
   .shad-input {
-    @apply h-11 border-dark-500 bg-white focus-visible:ring-0 focus-visible:ring-offset-0 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
+    @apply h-11 bg-white placeholder:text-dark-700 focus-visible:ring-0 focus-visible:ring-offset-0 dark:border-dark-500 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
   }
 
   .shad-input-icon {
-    @apply h-11 border-dark-500 focus-visible:ring-0 focus-visible:ring-offset-0 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
+    @apply h-11 focus-visible:ring-0 focus-visible:ring-offset-0 dark:border-dark-500 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
   }
 
   .shad-textArea {
-    @apply border-dark-500 bg-white focus-visible:ring-0 focus-visible:ring-offset-0 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
+    @apply bg-white focus-visible:ring-0 focus-visible:ring-offset-0 dark:border-dark-500 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
   }
 
   .shad-combobox-item {
@@ -231,15 +231,15 @@
   }
 
   .shad-select-trigger {
-    @apply h-11 border-dark-500 placeholder:text-dark-600 focus:ring-0 focus:ring-offset-0 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
+    @apply h-11 placeholder:text-dark-600 focus:ring-0 focus:ring-offset-0 dark:border-dark-500 dark:bg-dark-400 dark:placeholder:text-dark-600 !important;
   }
 
   .shad-select-content {
-    @apply border-dark-500 dark:bg-dark-400 !important;
+    @apply dark:border-dark-500 dark:bg-dark-400 !important;
   }
 
   .shad-dialog {
-    @apply border-dark-500 dark:bg-dark-400 !important;
+    @apply dark:border-dark-500 dark:bg-dark-400 !important;
   }
 
   .shad-dialog button {
@@ -280,7 +280,7 @@
 
   /* =====  REACT PHONE NUMBER INPUT OVERRIDES */
   .input-phone {
-    @apply mt-2 h-11 rounded-md border border-dark-500 bg-white px-3 text-sm dark:bg-dark-400 !important;
+    @apply mt-2 h-11 rounded-md border border-dark-700 bg-white px-3 text-sm dark:border-dark-500 dark:bg-dark-400 !important;
   }
 
   /* =====  REACT DATE PICKER OVERRIDES */

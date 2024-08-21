@@ -21,7 +21,7 @@ export function ThemeToggle() {
         <Button
           variant="outline"
           size="icon"
-          className="bg-theme fixed bottom-2 left-2 z-50 shadow-md shadow-slate-600 md:left-auto md:right-4 md:top-3"
+          className="fixed left-auto right-4 top-3 z-50 bg-white shadow-md shadow-slate-600 dark:bg-dark-300"
         >
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
