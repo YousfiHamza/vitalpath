@@ -54,14 +54,14 @@ export const PatientForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="my-auto h-fit space-y-3 md:space-y-4"
+        className="my-auto h-fit space-y-4"
       >
-        <section className="my-8 space-y-1 md:my-12 md:space-y-4">
+        <div className="my-8 space-y-1 md:space-y-2">
           <h1 className="header">Hi There 👋</h1>
           <p className="text-theme italic opacity-75">
             Get started by login to your dashboard.
           </p>
-        </section>
+        </div>
 
         <CustomFormField
           fieldType={FormFieldType.INPUT}

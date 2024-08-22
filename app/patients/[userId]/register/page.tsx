@@ -47,7 +47,10 @@ export default async function RegisterPage({
             <p className="justify-items-end text-dark-500 dark:text-dark-600 xl:text-left">
               © 2024 CarePluse
             </p>
-            <Link href="/login/?admin=true" className="text-green-500">
+            <Link
+              href="/login/?admin=true"
+              className="text-green-500 hover:font-bold hover:underline"
+            >
               Admin
             </Link>
           </div>

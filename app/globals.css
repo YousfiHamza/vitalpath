@@ -82,11 +82,11 @@
 
   /* ==== SUCCESS */
   .success-img {
-    @apply m-auto flex flex-1 flex-col items-center justify-between gap-10 py-10;
+    @apply m-auto flex flex-1 flex-col items-center justify-between gap-6 py-8;
   }
 
   .request-details {
-    @apply flex w-full flex-col items-center gap-8 border-y-2 border-dark-400 py-8 md:w-fit md:flex-row;
+    @apply flex w-full flex-col items-center gap-8 border-y-2 border-dark-700 py-8 dark:border-dark-500 md:w-fit md:flex-row;
   }
 
   /* ===== ADMIN */
@@ -195,7 +195,7 @@
 
   /* =====  SHADCN OVERRIDES */
   .shad-primary-btn {
-    @apply mt-10 bg-green-500 text-white !important;
+    @apply my-3 bg-green-500 text-white hover:opacity-75 md:my-5 !important;
   }
 
   .shad-danger-btn {
@@ -319,7 +319,8 @@
 }
 
 .react-datepicker__time-list-item {
-  @apply hover:bg-white hover:dark:bg-dark-400 !important;
+  @apply hover:bg-slate-300 hover:dark:bg-white !important;
+  @apply hover:text-white dark:hover:text-dark-400 !important;
 }
 
 .react-datepicker__input-container input {
@@ -339,7 +340,7 @@
 }
 
 .react-datepicker__time-container {
-  border-left: 1px solid #363a3d !important;
+  @apply border-l-[1px] border-dark-700 dark:border-dark-500 !important;
 }
 
 .react-datepicker__time-list-item {

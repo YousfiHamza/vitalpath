@@ -6,7 +6,7 @@ import { PatientForm } from "@/components/modules/forms/PatientForm";
 export default function LoginPage() {
   return (
     <div className="flex min-h-screen">
-      <section className="remove-scrollbar container my-auto">
+      <div className="remove-scrollbar container my-auto">
         <div className="sub-container min-h-screen max-w-[496px]">
           <Link
             href="/"
@@ -28,12 +28,15 @@ export default function LoginPage() {
             <p className="justify-items-end text-dark-500 dark:text-dark-600 xl:text-left">
               © 2024 CarePluse
             </p>
-            <Link href="/login/?admin=true" className="text-green-500">
+            <Link
+              href="/login/?admin=true"
+              className="text-green-500 hover:font-bold hover:underline"
+            >
               Admin
             </Link>
           </div>
         </div>
-      </section>
+      </div>
 
       <Image
         src="/assets/images/onboarding-img.png"
