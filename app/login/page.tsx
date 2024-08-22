@@ -2,10 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { PatientForm } from "@/components/modules/forms/PatientForm";
+import { PasskeyModal } from "@/components/modules/PassKeyModal";
 
-export default function LoginPage() {
+export default function LoginPage({ searchParams }: SearchParamProps) {
+  const isAdmin = searchParams?.admin === "true";
+
   return (
     <div className="flex min-h-screen">
+      {isAdmin && <PasskeyModal />}
       <div className="remove-scrollbar container my-auto">
         <div className="sub-container min-h-screen max-w-[496px]">
           <Link
