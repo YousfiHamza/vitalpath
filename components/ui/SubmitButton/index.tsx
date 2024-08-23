@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 
 import { ButtonProps } from "./types";
 
-const SubmitButton = ({ isLoading, className, children }: ButtonProps) => {
+const SubmitButton = ({
+  isLoading = false,
+  className,
+  children,
+}: ButtonProps) => {
   return (
     <Button
       type="submit"

@@ -1,5 +1,5 @@
 export type ButtonProps = {
-  isLoading: boolean;
+  isLoading?: boolean;
   className?: string;
   children: React.ReactNode;
 };
