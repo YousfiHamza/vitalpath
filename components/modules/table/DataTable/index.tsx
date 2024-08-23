@@ -96,37 +96,39 @@ export function DataTable<TData, TValue>({
           )}
         </TableBody>
       </Table>
-      <div className="table-actions">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-          className="shad-gray-btn"
-        >
-          <Image
-            src="/assets/icons/arrow.svg"
-            width={24}
-            height={24}
-            alt="arrow"
-          />
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-          className="shad-gray-btn"
-        >
-          <Image
-            src="/assets/icons/arrow.svg"
-            width={24}
-            height={24}
-            alt="arrow "
-            className="rotate-180"
-          />
-        </Button>
-      </div>
+      {table.getCanPreviousPage() || table.getCanNextPage() ? (
+        <div className="table-actions">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+            className="shad-gray-btn"
+          >
+            <Image
+              src="/assets/icons/arrow.svg"
+              width={24}
+              height={24}
+              alt="arrow"
+            />
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+            className="shad-gray-btn"
+          >
+            <Image
+              src="/assets/icons/arrow.svg"
+              width={24}
+              height={24}
+              alt="arrow "
+              className="rotate-180"
+            />
+          </Button>
+        </div>
+      ) : null}
     </div>
   );
 }

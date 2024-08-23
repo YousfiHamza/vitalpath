@@ -89,8 +89,6 @@ export default function RegisterForm({ user }: { user: User }) {
         privacyConsent: values.privacyConsent,
       };
 
-      console.log("patient :", patient);
-
       const newPatient = await registerPatient(patient);
 
       if (newPatient) {

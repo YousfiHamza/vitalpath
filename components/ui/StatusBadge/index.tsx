@@ -7,9 +7,9 @@ export const StatusBadge = ({ status }: { status: Status }) => {
   return (
     <div
       className={clsx("status-badge", {
-        "bg-green-600": status === "scheduled",
-        "bg-blue-600": status === "pending",
-        "bg-red-600": status === "cancelled",
+        "bg-green-900 dark:bg-green-600": status === "scheduled",
+        "bg-blue-900 dark:bg-blue-600": status === "pending",
+        "bg-red-900 dark:bg-red-600": status === "cancelled",
       })}
     >
       <Image

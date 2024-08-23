@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
+import { Trash } from "lucide-react";
 
 import { convertFileToUrl } from "@/lib/utils";
 
@@ -18,17 +19,29 @@ export const FileUploader = ({ files, onChange }: FileUploaderProps) => {
 
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
+  const handleRemove = () => {
+    onChange([]);
+  };
+
   return (
     <div {...getRootProps()} className="file-upload">
       <input {...getInputProps()} id="uploaded" />
       {files && files?.length > 0 ? (
-        <Image
-          src={convertFileToUrl(files[0])}
-          width={1000}
-          height={1000}
-          alt="uploaded image"
-          className="max-h-[400px] overflow-hidden object-cover"
-        />
+        <div className="relative">
+          <button
+            onClick={handleRemove}
+            className="absolute -right-3 -top-3 rounded-full bg-red-700 p-2 text-slate-100 hover:opacity-75"
+          >
+            <Trash className="h-6 w-6" />
+          </button>
+          <Image
+            src={convertFileToUrl(files[0])}
+            width={1000}
+            height={1000}
+            alt="uploaded image"
+            className="max-h-[400px] overflow-hidden object-cover"
+          />
+        </div>
       ) : (
         <>
           <Image

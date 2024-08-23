@@ -5,6 +5,8 @@ import { AppointmentForm } from "@/components/modules/forms/AppointmentForm";
 
 import { getPatient } from "@/lib/actions/patient.actions";
 
+export const fetchCache = "force-no-store";
+
 export default async function AppointmentPage({
   params: { userId },
 }: SearchParamProps) {

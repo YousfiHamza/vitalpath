@@ -12,6 +12,8 @@ const RegisterForm = dynamic(
 import { getPatient, getUser } from "@/lib/actions/patient.actions";
 import dynamic from "next/dynamic";
 
+export const fetchCache = "force-no-store";
+
 export default async function RegisterPage({
   params: { userId },
 }: SearchParamProps) {

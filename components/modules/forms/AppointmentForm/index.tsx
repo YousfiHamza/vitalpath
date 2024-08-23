@@ -85,8 +85,6 @@ export const AppointmentForm = ({
 
         const newAppointment = await createAppointment(appointment);
 
-        console.log("newAppointment", newAppointment);
-
         if (newAppointment) {
           form.reset();
           router.push(
