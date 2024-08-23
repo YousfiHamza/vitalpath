@@ -15,7 +15,10 @@ import { Form } from "@/components/ui/form";
 
 import { getAppointmentSchema } from "@/lib/validation";
 import { Doctors } from "@/lib/constants";
-import { createAppointment } from "@/lib/actions/appointment.actions";
+import {
+  createAppointment,
+  updateAppointment,
+} from "@/lib/actions/appointment.actions";
 import { Appointment } from "@/types/appwrite.types";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -25,11 +28,13 @@ export const AppointmentForm = ({
   patientId,
   type = "create",
   appointment,
+  setOpen,
 }: {
   userId: string;
   patientId: string;
   type: "create" | "schedule" | "cancel";
   appointment?: Appointment;
+  setOpen?: Dispatch<SetStateAction<boolean>>;
 }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -68,7 +73,6 @@ export const AppointmentForm = ({
 
     try {
       if (type === "create" && patientId) {
-        console.log("creating appointment");
         const appointment = {
           userId,
           patient: patientId,
@@ -78,7 +82,6 @@ export const AppointmentForm = ({
           status: status as Status,
           note: values.note,
         };
-        console.log("appointment", appointment);
 
         const newAppointment = await createAppointment(appointment);
 
@@ -89,6 +92,25 @@ export const AppointmentForm = ({
           router.push(
             `/patients/${userId}/new-appointment/success?appointmentId=${newAppointment.$id}`,
           );
+        }
+      } else {
+        const appointmentToUpdate = {
+          userId,
+          appointmentId: appointment?.$id!,
+          appointment: {
+            primaryPhysician: values.primaryPhysician,
+            schedule: new Date(values.schedule),
+            status: status as Status,
+            cancellationReason: values.cancellationReason,
+          },
+          type,
+        };
+
+        const updatedAppointment = await updateAppointment(appointmentToUpdate);
+
+        if (updatedAppointment) {
+          setOpen && setOpen(false);
+          form.reset();
         }
       }
     } catch (error) {
@@ -117,7 +139,7 @@ export const AppointmentForm = ({
       >
         {type === "create" && (
           <div className="my-6 space-y-1 md:my-10 md:space-y-4">
-            <h1 className="header">New Appointment</h1>
+            <h1 className="header">New Appointment 📅</h1>
             <p className="text-theme italic opacity-75">
               Request a new appointment in 10 seconds.
             </p>
