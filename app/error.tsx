@@ -35,7 +35,7 @@ export default function ErrorPage() {
             </p>
             <Link href="https://hamza.yousfi.dev" target="_blank">
               <SubmitButton>
-                <LucideSend className="mr-4" />
+                <LucideSend className="mr-2" />
                 Contact ADMIN
               </SubmitButton>
             </Link>

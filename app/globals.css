@@ -99,7 +99,7 @@
   }
 
   .admin-stat {
-    @apply flex w-full flex-col justify-between gap-5 sm:flex-row xl:gap-10;
+    @apply flex w-full flex-col justify-between gap-5 md:flex-row xl:gap-10;
   }
 
   /* ==== FORM */
@@ -122,7 +122,7 @@
 
   /* ==== Stat Card */
   .stat-card {
-    @apply flex flex-1 flex-col gap-6 rounded-2xl bg-transparent bg-cover p-6 shadow-2xl shadow-black;
+    @apply flex flex-1 flex-col gap-6 rounded-2xl bg-transparent bg-cover p-6 shadow-2xl shadow-black/50 transition-all ease-in-out hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl hover:shadow-black dark:shadow-slate-100/30 hover:dark:shadow-slate-100;
   }
 
   /* ==== Status Badge */

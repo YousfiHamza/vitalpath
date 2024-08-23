@@ -2,11 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-import { StatCard } from "@/components/modules/StatCard";
-import { columns } from "@/components/modules/table/columns";
-import { DataTable } from "@/components/modules/table/DataTable";
-
 import { getRecentAppointmentList } from "@/lib/actions/appointment.actions";
+import { AdminPanel } from "@/components/sections/AdminPanel";
 
 const LogoutButton = dynamic(
   () => import("@/components/ui/LogoutButton").then(mod => mod.LogoutButton),
@@ -43,29 +40,7 @@ export default async function AdminPage() {
             Start the day with managing new appointments
           </p>
         </section>
-
-        <section className="admin-stat">
-          <StatCard
-            type="appointments"
-            count={appointments.scheduledCount}
-            label="Scheduled appointments"
-            icon={"/assets/icons/appointments.svg"}
-          />
-          <StatCard
-            type="pending"
-            count={appointments.pendingCount}
-            label="Pending appointments"
-            icon={"/assets/icons/pending.svg"}
-          />
-          <StatCard
-            type="cancelled"
-            count={appointments.cancelledCount}
-            label="Cancelled appointments"
-            icon={"/assets/icons/cancelled.svg"}
-          />
-        </section>
-
-        <DataTable columns={columns} data={appointments.documents} />
+        <AdminPanel appointments={appointments} />
       </main>
     </div>
   );
