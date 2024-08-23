@@ -29,7 +29,7 @@ export const PasskeyModal = () => {
 
   const encryptedKey =
     typeof window !== "undefined"
-      ? window.localStorage.getItem("accessKey")
+      ? window.sessionStorage.getItem("accessKey")
       : null;
 
   useEffect(() => {
@@ -40,8 +40,8 @@ export const PasskeyModal = () => {
         process.env.NEXT_PUBLIC_ADMIN_PASSKEY &&
         accessKey === process.env.NEXT_PUBLIC_ADMIN_PASSKEY.toString()
       ) {
-        setOpen(false);
         router.push("/admin");
+        setOpen(false);
       } else {
         setOpen(true);
       }
@@ -49,7 +49,7 @@ export const PasskeyModal = () => {
 
   const closeModal = () => {
     setOpen(false);
-    router.push("/");
+    router.push("/login");
   };
 
   const validatePasskey = (
@@ -63,7 +63,7 @@ export const PasskeyModal = () => {
     ) {
       const encryptedKey = encryptKey(passkey);
 
-      localStorage.setItem("accessKey", encryptedKey);
+      sessionStorage.setItem("accessKey", encryptedKey);
 
       setOpen(false);
     } else {
