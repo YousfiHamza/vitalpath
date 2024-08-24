@@ -30,8 +30,8 @@ export const createUser = async (user: CreateUserParams) => {
     // Check existing user
     if (error && error?.code === 409) {
       const documents = await Promise.any([
-        users.list([Query.equal("phone", [user.phone])]),
-        users.list([Query.equal("email", [user.email])]),
+        users.list([Query.equal("phone", [user.phone ?? ""])]),
+        users.list([Query.equal("email", [user.email ?? ""])]),
       ]);
       return documents.users[0];
     }
