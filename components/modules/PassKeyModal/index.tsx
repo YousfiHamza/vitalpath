@@ -67,7 +67,7 @@ export const PasskeyModal = () => {
 
       setOpen(false);
     } else {
-      setError("Invalid passkey. Please try again.");
+      setError("Invalid passkey. Please this '123456' !");
     }
   };
 
@@ -88,6 +88,8 @@ export const PasskeyModal = () => {
           </AlertDialogTitle>
           <AlertDialogDescription>
             To access the admin page, please enter the passkey.
+            <br />
+            <span className="font-mono font-light">(use the code: 123456)</span>
           </AlertDialogDescription>
         </AlertDialogHeader>
         <div>

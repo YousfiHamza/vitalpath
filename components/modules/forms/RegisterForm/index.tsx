@@ -126,7 +126,7 @@ export default function RegisterForm({ user }: { user: User }) {
             control={form.control}
             name="name"
             label="Full name"
-            placeholder="John Doe"
+            placeholder="Tyler durden"
             iconSrc="/assets/icons/user.svg"
             iconAlt="user"
           />
@@ -138,7 +138,7 @@ export default function RegisterForm({ user }: { user: User }) {
               control={form.control}
               name="email"
               label="Email address"
-              placeholder="johndoe@gmail.com"
+              placeholder="tylerdurden@fc.com"
               iconSrc="/assets/icons/email.svg"
               iconAlt="email"
             />

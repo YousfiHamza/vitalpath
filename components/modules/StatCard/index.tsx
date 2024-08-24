@@ -7,7 +7,7 @@ type StatCardProps = {
   count: number;
   label: string;
   icon?: string;
-  onClick: (status: string) => void;
+  onClick?: (status: string) => void;
 };
 
 export const StatCard = ({
@@ -33,7 +33,7 @@ export const StatCard = ({
   }
   return (
     <button
-      onClick={() => onClick(status)}
+      onClick={() => onClick && onClick(status)}
       className={clsx("stat-card", {
         "bg-appointments": type === "appointments",
         "bg-pending": type === "pending",
