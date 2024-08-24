@@ -80,6 +80,10 @@
     @apply text-14-regular justify-items-end text-center text-dark-600 xl:text-left;
   }
 
+  .home-header {
+    @apply sticky top-0 z-40 mx-auto bg-slate-200 p-4 shadow-2xl shadow-slate-900/60 dark:bg-slate-950 dark:shadow-slate-300/30 md:px-10 lg:relative lg:bg-slate-200/30 lg:dark:bg-slate-950/10 xl:mt-4 xl:rounded-2xl;
+  }
+
   /* ==== SUCCESS */
   .success-img {
     @apply m-auto flex flex-1 flex-col items-center justify-between gap-6 py-8;
