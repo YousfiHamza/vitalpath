@@ -9,7 +9,10 @@ import Waves from "@/public/assets/icons/waves.svg";
 
 export default function HeroSection() {
   return (
-    <div className="text-theme -mx-4 flex flex-wrap items-center">
+    <section
+      id="hero-section"
+      className="text-theme -mx-4 flex flex-wrap items-center"
+    >
       <div id="content" className="w-full px-3 lg:w-1/2">
         <div className="mx-auto mb-6 max-w-[530px] text-center sm:mb-10 lg:mb-0 lg:ml-0 lg:text-left">
           <motion.span
@@ -62,7 +65,7 @@ export default function HeroSection() {
             </Link>
             <Link
               href="#how-it-works"
-              className="inline-flex items-center rounded px-8 py-[14px] text-base hover:underline"
+              className="inline-flex items-center rounded px-8 py-[14px] text-base hover:font-semibold hover:underline"
             >
               <PlayIcon className="mr-2" />
               How it Works
@@ -70,7 +73,7 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-      <motion.div id="images" className="w-full px-4 lg:w-1/2">
+      <motion.div id="images" className="w-full sm:px-4 lg:w-1/2">
         <div className="relative -z-20 mx-auto h-[333px] w-[300px] max-w-[700px] sm:h-[444px] sm:w-[444px] lg:ml-0 lg:h-[560px] lg:w-full">
           <motion.div
             initial={{ x: 2000, opacity: 0 }}
@@ -86,7 +89,7 @@ export default function HeroSection() {
               style={{ color: "transparent", objectFit: "contain" }}
               src="/assets/images/doctors-office.jpg"
               sizes="(min-width: 400px) 444px, (min-width: 768px) 555px, 666px"
-              className="rounded-xl"
+              className="rounded-xl shadow-2xl shadow-black dark:shadow-slate-700"
             />
           </motion.div>
           <motion.div
@@ -103,7 +106,7 @@ export default function HeroSection() {
               style={{ color: "transparent" }}
               src="/assets/images/onboarding-img.png"
               sizes="(min-width: 400px) 333px, (min-width: 768px) 444px, 555px"
-              className="h-full w-full rounded-lg"
+              className="h-full w-full rounded-lg shadow-2xl shadow-black dark:shadow-slate-700"
             />
             <div className="absolute -right-3 -top-3 -z-10 h-full w-full rounded-lg border border-opacity-10 bg-blue-700 bg-opacity-5 backdrop-blur-[6px] dark:border-white dark:border-opacity-10 dark:bg-white dark:bg-opacity-10 md:-right-6 md:-top-6"></div>
           </motion.div>
@@ -117,6 +120,6 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }

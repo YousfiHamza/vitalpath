@@ -80,8 +80,8 @@
     @apply text-14-regular justify-items-end text-center text-dark-600 xl:text-left;
   }
 
-  .home-header {
-    @apply sticky top-0 z-40 mx-auto bg-slate-200 p-4 shadow-2xl shadow-slate-900/60 dark:bg-slate-950 dark:shadow-slate-300/30 md:px-10 lg:relative lg:bg-slate-200/30 lg:dark:bg-slate-950/10 xl:mt-4 xl:rounded-2xl;
+  .navbar {
+    @apply sticky top-0 z-40 mx-auto bg-slate-200 p-4 shadow-2xl shadow-slate-900/60 dark:bg-slate-950 dark:shadow-slate-300/30 md:pl-10 md:pr-20 lg:relative lg:bg-slate-100 lg:dark:bg-slate-950 xl:mt-4 xl:rounded-2xl xl:pr-10;
   }
 
   /* ==== SUCCESS */
@@ -126,7 +126,7 @@
 
   /* ==== Stat Card */
   .stat-card {
-    @apply flex flex-1 flex-col gap-6 rounded-2xl bg-transparent bg-cover p-6 shadow-2xl shadow-black/50 transition-all ease-in-out hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl hover:shadow-black dark:shadow-slate-100/30 hover:dark:shadow-slate-100;
+    @apply bg-theme flex flex-1 flex-col gap-6 rounded-2xl bg-cover p-6 shadow-2xl shadow-black/50 transition-all ease-in-out hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl hover:shadow-black dark:shadow-slate-200/20 hover:dark:shadow-slate-400;
   }
 
   /* ==== Status Badge */
@@ -136,7 +136,7 @@
 
   /* Data Table */
   .data-table {
-    @apply z-10 w-full overflow-hidden rounded-lg border border-dark-700 shadow-2xl shadow-black dark:border-dark-400;
+    @apply z-10 w-full overflow-hidden rounded-lg border border-dark-700 shadow-2xl shadow-black dark:border-dark-400 dark:shadow-xl dark:shadow-slate-800;
   }
 
   .table-actions {
@@ -255,7 +255,7 @@
   }
 
   .shad-table {
-    @apply overflow-hidden rounded-lg !important;
+    @apply overflow-hidden rounded-t-lg !important;
   }
 
   .shad-table-row-header {
