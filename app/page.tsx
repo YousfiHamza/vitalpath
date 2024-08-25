@@ -6,7 +6,7 @@ import { Navbar } from "@/components/modules/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { CallToActionSection } from "@/components/sections/CallToActionSection";
 
-const links = [
+const NavLinks = [
   {
     href: "/#how-it-works",
     label: "How it works",
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="dark:bg-black-100 bg-theme pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]" />
       </div>
       {/* Main Page Content */}
-      <Navbar links={links}>
+      <Navbar links={NavLinks}>
         <Link
           href="/login"
           className="flex h-10 w-10 items-center justify-center gap-3 rounded-full bg-green-700 p-1 font-mono font-semibold text-slate-100 hover:opacity-75 dark:bg-green-800 hover:dark:bg-green-700 hover:dark:text-white hover:dark:opacity-100 md:w-auto md:rounded-lg md:px-2 md:py-1"

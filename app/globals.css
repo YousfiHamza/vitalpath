@@ -81,7 +81,7 @@
   }
 
   .navbar {
-    @apply sticky top-0 z-40 mx-auto bg-slate-200 p-4 shadow-2xl shadow-slate-900/60 dark:bg-slate-950 dark:shadow-slate-300/30 md:pl-10 md:pr-20 lg:relative lg:bg-slate-100 lg:dark:bg-slate-950 xl:mt-4 xl:rounded-2xl xl:pr-10;
+    @apply sticky top-0 z-40 mx-auto bg-slate-200 p-4 shadow-2xl shadow-slate-900/60 dark:bg-slate-950 dark:shadow-md dark:shadow-slate-300/20 md:pl-10 md:pr-20 lg:relative lg:bg-slate-100 lg:dark:bg-slate-950 xl:mt-4 xl:rounded-2xl xl:pr-10;
   }
 
   /* ==== SUCCESS */
@@ -126,7 +126,7 @@
 
   /* ==== Stat Card */
   .stat-card {
-    @apply bg-theme flex flex-1 flex-col gap-6 rounded-2xl bg-cover p-6 shadow-2xl shadow-black/50 transition-all ease-in-out hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl hover:shadow-black dark:shadow-slate-200/20 hover:dark:shadow-slate-400;
+    @apply bg-theme flex flex-1 flex-col gap-6 rounded-2xl p-6 shadow-2xl shadow-black/50 transition-all ease-in-out hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl hover:shadow-black dark:shadow-md dark:shadow-slate-200/20 hover:dark:shadow-xl hover:dark:shadow-slate-400;
   }
 
   /* ==== Status Badge */
@@ -207,7 +207,7 @@
   }
 
   .shad-gray-btn {
-    @apply cursor-pointer border border-dark-500 bg-dark-400 text-white !important;
+    @apply cursor-pointer border border-dark-500 bg-dark-400 text-white hover:opacity-75 !important;
   }
 
   .shad-input-label {

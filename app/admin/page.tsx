@@ -27,7 +27,7 @@ export default async function AdminPage() {
   return (
     <>
       {/* Dotted Background */}
-      <div className="absolute bottom-0 left-0 top-0 flex min-h-full w-full items-center justify-center bg-dot-black/[0.3] dark:bg-dot-white/[0.4]">
+      <div className="absolute bottom-0 left-0 top-0 flex min-h-full w-full items-center justify-center bg-dot-black/[0.3] dark:bg-dot-white/[0.3]">
         <div className="bg-theme [mask-image:dark:radial-gradient(ellipse_at_center,transparent_50%,black)] pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]" />
       </div>
       <Navbar links={links}>

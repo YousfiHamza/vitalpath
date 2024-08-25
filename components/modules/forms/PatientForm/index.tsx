@@ -121,8 +121,7 @@ export const PatientForm = () => {
           <h1 className="header">Hi There 👋</h1>
           <p className="text-theme italic opacity-75">
             Get started by creating an account
-            <br />
-            (or logging in if you already have one)
+            <br />- or login to an existing account
           </p>
         </div>
 
@@ -159,7 +158,7 @@ export const PatientForm = () => {
         <SubmitButton isLoading={isLoading}>Get Started</SubmitButton>
 
         <p className="text-center font-mono text-sm font-light">
-          Or you can login by{" "}
+          login with{" "}
           <button
             type="button"
             onClick={handleToggleLoginMethod}

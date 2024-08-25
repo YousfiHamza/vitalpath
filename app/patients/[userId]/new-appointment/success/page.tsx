@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Doctors } from "@/lib/constants";
 import { getAppointment } from "@/lib/actions/appointment.actions";
 import { formatDateTime } from "@/lib/utils";
+import { CalendarDays, Home } from "lucide-react";
 
 export default async function AppointementSuccessPage({
   searchParams,
@@ -74,12 +75,19 @@ export default async function AppointementSuccessPage({
             <p> {formatDateTime(appointment.schedule).dateTime}</p>
           </div>
         </section>
+        <div className="flex flex-col">
+          <Button variant="outline" className="shad-primary-btn" asChild>
+            <Link href={`/patients/${userId}/new-appointment`}>
+              New Appointment <CalendarDays className="ml-2" />
+            </Link>
+          </Button>
 
-        <Button variant="outline" className="shad-primary-btn" asChild>
-          <Link href={`/patients/${userId}/new-appointment`}>
-            New Appointment
-          </Link>
-        </Button>
+          <Button variant="outline" className="shad-gray-btn" asChild>
+            <Link href="/">
+              Home Page <Home className="ml-2" />
+            </Link>
+          </Button>
+        </div>
 
         <p className="copyright">© 2024 CarePluse</p>
       </div>

@@ -35,9 +35,12 @@ export const StatCard = ({
     <button
       onClick={() => onClick && onClick(status)}
       className={clsx("stat-card", {
-        "bg-appointments": type === "appointments",
-        "bg-pending": type === "pending",
-        "bg-cancelled": type === "cancelled",
+        "bg-gradient-to-r from-transparent from-50% to-yellow-500/20":
+          type === "appointments",
+        "bg-gradient-to-r from-transparent from-50% to-blue-500/20":
+          type === "pending",
+        "bg-gradient-to-r from-transparent from-50% to-red-500/20":
+          type === "cancelled",
       })}
     >
       <div className="flex items-center gap-4">
