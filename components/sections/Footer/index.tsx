@@ -13,9 +13,9 @@ export async function Footer() {
           className="h-10 w-fit"
         />{" "}
         <span className="font-inter text-4xl font-bold text-slate-600 dark:text-light-200">
-          CarePulse
+          VitalPath
         </span>
-        <span className="sr-only">CarePulse Home Page</span>
+        <span className="sr-only">VitalPath Home Page</span>
       </Link>
       <nav aria-label="Footer" className="w-full">
         <ul className="text-theme mb-3 flex w-full justify-evenly text-sm font-medium sm:mb-0 sm:gap-10 sm:text-lg md:justify-end">

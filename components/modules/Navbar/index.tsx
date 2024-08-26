@@ -16,9 +16,9 @@ export function Navbar({ links = [], children }: NavbarProps) {
             className="h-10 w-fit"
           />{" "}
           <span className="font-inter text-2xl font-bold text-slate-600 dark:text-light-200 md:text-4xl">
-            CarePulse
+            VitalPath
           </span>
-          <span className="sr-only">CarePulse Home Page</span>
+          <span className="sr-only">VitalPath Home Page</span>
         </Link>
       </div>
       {links.length > 0 && (

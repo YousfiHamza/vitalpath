@@ -31,7 +31,7 @@ export default function HeroSection() {
             className="mb-5 font-inter text-2xl font-medium sm:text-4xl lg:text-6xl lg:leading-[60px]"
           >
             <span className="text-4xl font-bold text-green-700 lg:text-7xl">
-              CarePulse
+              VitalPath
             </span>
             <br />
             Driving the Future of Healthcare Management
@@ -44,7 +44,7 @@ export default function HeroSection() {
           >
             Your health, your way. With{" "}
             <span className="text-lg font-semibold text-green-700 lg:text-xl">
-              CarePulse
+              VitalPath
             </span>
             , you can schedule appointments, receive personalized care updates,
             and track your progress anytime, anywhere. Experience healthcare

@@ -31,7 +31,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <section
-      className="w-full bg-transparent font-sans md:my-10 md:px-10"
+      className="w-full overflow-hidden bg-transparent font-sans md:my-10 md:px-10"
       ref={containerRef}
       id="how-it-works"
     >
@@ -48,9 +48,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             3 straightforward steps
           </b>
           , explore how to effortlessly manage your health and wellness with
-          CarePulse. From scheduling appointments to receiving personalized care
+          VitalPath. From scheduling appointments to receiving personalized care
           updates, our intuitive process ensures you stay in control every step
-          of the way. Let CarePulse guide you through a seamless healthcare
+          of the way. Let VitalPath guide you through a seamless healthcare
           experience, designed to make your journey to better health as smooth
           and stress-free as possible.
         </p>

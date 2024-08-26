@@ -39,7 +39,7 @@ export default async function RegisterPage({
               className="h-10 w-fit"
             />{" "}
             <span className="font-inter text-4xl font-bold text-slate-600 dark:text-light-200">
-              CarePulse
+              VitalPath
             </span>
           </Link>
 
