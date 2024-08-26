@@ -85,7 +85,7 @@
   }
 
   .navbar {
-    @apply sticky top-0 z-40 mx-auto bg-slate-200 p-4 shadow-2xl shadow-slate-900/60 dark:bg-slate-950 dark:shadow-md dark:shadow-slate-300/20 md:pl-10 md:pr-20 lg:relative lg:bg-slate-100 lg:dark:bg-slate-950 xl:mt-4 xl:rounded-2xl xl:pr-10;
+    @apply sticky top-0 z-40 mx-auto bg-slate-100 p-4 shadow-2xl shadow-slate-900/60 dark:bg-slate-950 dark:shadow-md dark:shadow-slate-300/20 md:pl-10 md:pr-20 lg:relative lg:dark:bg-slate-950 xl:mt-4 xl:rounded-2xl xl:pr-10;
   }
 
   /* ==== SUCCESS */

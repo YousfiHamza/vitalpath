@@ -5,7 +5,7 @@ import { NavbarProps } from "./types";
 
 export function Navbar({ links = [], children }: NavbarProps) {
   return (
-    <header className="navbar relative flex max-w-7xl flex-col justify-between sm:flex-row">
+    <header className="navbar relative flex max-w-7xl justify-between">
       <div className="flex-1">
         <Link href="/" className="flex h-10 w-fit items-center gap-2">
           <Image
@@ -22,7 +22,7 @@ export function Navbar({ links = [], children }: NavbarProps) {
         </Link>
       </div>
       {links.length > 0 && (
-        <nav className="flex items-center justify-end">
+        <nav className="hidden items-center justify-end md:flex">
           {links.map(({ href, label }, idx) => (
             <Link
               href={href}
@@ -32,9 +32,9 @@ export function Navbar({ links = [], children }: NavbarProps) {
               {label}
             </Link>
           ))}
-          <div>{children}</div>
         </nav>
       )}
+      <div>{children}</div>
     </header>
   );
 }

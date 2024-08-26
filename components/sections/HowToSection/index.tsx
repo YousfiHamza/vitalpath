@@ -18,7 +18,7 @@ export function HowToSection() {
             Access our platform with ease — log in using either your phone
             number or email.
           </p>
-          <div className="relative h-auto w-full -skew-x-2 skew-y-1 overflow-hidden rounded-xl border-2 border-slate-500 shadow-2xl shadow-black dark:shadow-slate-300 md:mb-12 md:max-w-[777px]">
+          <div className="relative h-auto w-full -skew-x-2 skew-y-1 overflow-hidden rounded-xl border-2 border-slate-500 shadow-lg shadow-black dark:shadow-slate-300 md:mb-12 md:max-w-[777px]">
             <Image
               alt="LoginPage screenshot"
               src="/assets/images/how-to/login.jpg"
@@ -44,7 +44,7 @@ export function HowToSection() {
             information such as your date of birth, emergency contacts, current
             medications, family medical history, allergies, and more.
           </p>
-          <div className="relative h-auto w-full -skew-x-2 skew-y-1 overflow-hidden rounded-xl border-2 border-slate-500 shadow-2xl shadow-black dark:shadow-slate-300 md:mb-12 md:max-w-[777px]">
+          <div className="relative h-auto w-full -skew-x-2 skew-y-1 overflow-hidden rounded-xl border-2 border-slate-500 shadow-lg shadow-black dark:shadow-slate-300 md:mb-12 md:max-w-[777px]">
             <Image
               alt="LoginPage screenshot"
               src="/assets/images/how-to/register.jpg"
@@ -73,7 +73,7 @@ export function HowToSection() {
             provide any relevant details about your visit, including the reason
             and any current medications you may be taking.
           </p>
-          <div className="relative h-auto w-full -skew-x-2 skew-y-1 overflow-hidden rounded-xl border-2 border-slate-500 shadow-2xl shadow-black dark:shadow-slate-300 md:mb-12 md:max-w-[777px]">
+          <div className="relative h-auto w-full -skew-x-2 skew-y-1 overflow-hidden rounded-xl border-2 border-slate-500 shadow-lg shadow-black dark:shadow-slate-300 md:mb-12 md:max-w-[777px]">
             <Image
               alt="LoginPage screenshot"
               src="/assets/images/how-to/new-appointment.jpg"
@@ -104,7 +104,7 @@ export function HowToSection() {
             you will receive an SMS notification with the decision and the
             reason behind it.
           </p>
-          <div className="relative h-auto w-full -skew-x-2 skew-y-1 overflow-hidden rounded-xl border-2 border-slate-500 shadow-2xl shadow-black dark:shadow-slate-300 md:mb-12 md:max-w-[777px]">
+          <div className="relative h-auto w-full -skew-x-2 skew-y-1 overflow-hidden rounded-xl border-2 border-slate-500 shadow-lg shadow-black dark:shadow-slate-300 md:mb-12 md:max-w-[777px]">
             <Image
               alt="LoginPage screenshot"
               src="/assets/images/how-to/admin.jpg"
