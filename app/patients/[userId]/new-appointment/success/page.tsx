@@ -75,14 +75,17 @@ export default async function AppointementSuccessPage({
             <p> {formatDateTime(appointment.schedule).dateTime}</p>
           </div>
         </section>
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center sm:flex-row sm:gap-4">
           <Button variant="outline" className="shad-primary-btn" asChild>
             <Link href={`/patients/${userId}/new-appointment`}>
               New Appointment <CalendarDays className="ml-2" />
             </Link>
           </Button>
 
-          <Button variant="outline" className="shad-gray-btn" asChild>
+          <Button
+            className="border-2 border-transparent bg-slate-800 text-slate-300 hover:bg-black hover:text-white dark:hover:border-white"
+            asChild
+          >
             <Link href="/">
               Home Page <Home className="ml-2" />
             </Link>

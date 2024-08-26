@@ -23,12 +23,12 @@ export async function Footer() {
             <Link href="/login">Book Now</Link>
           </li>
           <li className="inline-flex min-h-11 items-center hover:underline">
-            <Link href="https://hamza.yousfi.dev">Contact</Link>
+            <Link href="https://hamza.yousfi.dev" target="_blank">
+              Contact
+            </Link>
           </li>
           <li className="inline-flex min-h-11 items-center hover:underline">
-            <Link href="/#how-it-works" target="_blank">
-              How It Works
-            </Link>
+            <Link href="/#how-it-works">How It Works</Link>
           </li>
         </ul>
       </nav>

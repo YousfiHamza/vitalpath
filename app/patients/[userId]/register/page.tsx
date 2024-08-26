@@ -26,7 +26,7 @@ export default async function RegisterPage({
   return (
     <div className="flex min-h-screen">
       <section className="remove-scrollbar container my-auto">
-        <div className="sub-container min-h-screen max-w-[666px]">
+        <div className="sub-container min-h-screen max-w-[789px]">
           <Link
             href="/"
             className="flex h-10 w-fit items-center gap-2 md:mb-12"

@@ -15,14 +15,14 @@ export function Navbar({ links = [], children }: NavbarProps) {
             alt="patient"
             className="h-10 w-fit"
           />{" "}
-          <span className="font-inter text-4xl font-bold text-slate-600 dark:text-light-200">
+          <span className="font-inter text-2xl font-bold text-slate-600 dark:text-light-200 md:text-4xl">
             CarePulse
           </span>
           <span className="sr-only">CarePulse Home Page</span>
         </Link>
       </div>
       {links.length > 0 && (
-        <nav className="mt-4 flex items-center justify-end sm:mt-0">
+        <nav className="flex items-center justify-end">
           {links.map(({ href, label }, idx) => (
             <Link
               href={href}

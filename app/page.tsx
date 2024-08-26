@@ -5,6 +5,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import { Navbar } from "@/components/modules/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { CallToActionSection } from "@/components/sections/CallToActionSection";
+import { HowToSection } from "@/components/sections/HowToSection";
 
 const NavLinks = [
   {
@@ -36,6 +37,7 @@ export default function Home() {
       </Navbar>
       <main className="relative z-30 mx-auto max-w-7xl p-5 pb-0 md:p-10 md:pb-0">
         <HeroSection />
+        <HowToSection />
         <CallToActionSection />
         <Footer />
       </main>

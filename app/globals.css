@@ -4,6 +4,10 @@
 
 /* ========================================== TAILWIND STYLES */
 @layer base {
+  html {
+    @apply box-border scroll-pt-20 scroll-smooth md:scroll-pt-6;
+  }
+
   /* Remove scrollbar */
   .remove-scrollbar::-webkit-scrollbar {
     width: 0px;

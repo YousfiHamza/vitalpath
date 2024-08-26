@@ -5,5 +5,5 @@ export type NavbarProps = {
     href: string;
     label: string;
   }[];
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };

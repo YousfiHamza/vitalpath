@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { redirect } from "next/navigation";
 
 import { StatCard } from "@/components/modules/StatCard";
 import { columns } from "@/components/modules/table/columns";
 import { DataTable } from "@/components/modules/table/DataTable";
+
+import { decryptKey } from "@/lib/utils";
 
 export function AdminPanel({ appointments }: { appointments: any }) {
   const [myAppointments, setMyAppointments] = useState(appointments.documents);
@@ -23,6 +26,19 @@ export function AdminPanel({ appointments }: { appointments: any }) {
         : appointments.documents,
     );
   }, [status]);
+
+  useEffect(() => {
+    const encryptedKey =
+      typeof window !== "undefined"
+        ? window.sessionStorage.getItem("accessKey")
+        : null;
+
+    const accessKey = encryptedKey && decryptKey(encryptedKey);
+
+    if (accessKey !== process.env.NEXT_PUBLIC_ADMIN_PASSKEY!.toString()) {
+      redirect("/login");
+    }
+  }, []);
 
   return (
     <>
@@ -56,7 +72,7 @@ export function AdminPanel({ appointments }: { appointments: any }) {
         />
       </section>
 
-      <DataTable columns={columns} data={myAppointments} />
+      <DataTable columns={columns} data={myAppointments || []} />
     </>
   );
 }
