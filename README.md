@@ -6,6 +6,8 @@
 
 ## 🩺 Overview
 
+🌐[Live Demo](https://vitalpath.yousfi.dev)
+
 **VitalPath** is a comprehensive healthcare platform designed to streamline patient management processes. It simplifies tasks ranging from patient registration and appointment scheduling to secure medical record handling, allowing healthcare providers to focus on delivering quality care. The platform is built with a user-friendly interface that ensures a smooth experience for both providers and patients, utilizing modern technologies for high performance and reliability.
 
 ![React](https://img.shields.io/badge/-React-black?style=for-the-badge&logoColor=white&logo=react&color=blue)
@@ -13,8 +15,6 @@
 ![Tailwind](https://img.shields.io/badge/-tailwind-black?style=for-the-badge&logo=tailwindcss&color=36d2fd)
 ![Appwrite](https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=red)
 ![Twilio](https://img.shields.io/badge/-Twilio-black?style=for-the-badge&logoColor=white&logo=twilio&color=ff0000)
-
-🌐[Live Demo](https://vitalpath.yousfi.dev)
 
 ---
 
