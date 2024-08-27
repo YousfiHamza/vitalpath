@@ -80,7 +80,10 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
               onCheckedChange={field.onChange}
             />
             <label htmlFor={props.name} className="checkbox-label">
-              {props.label}
+              {props.label}{" "}
+              {props.required && (
+                <span className="font-bold text-red-700">*</span>
+              )}
             </label>
           </div>
         </FormControl>
@@ -130,7 +133,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
 };
 
 const CustomFormField = (props: CustomProps) => {
-  const { control, name, label } = props;
+  const { control, name, label, required } = props;
 
   return (
     <FormField
@@ -139,7 +142,10 @@ const CustomFormField = (props: CustomProps) => {
       render={({ field }) => (
         <FormItem className="flex-1">
           {props.fieldType !== FormFieldType.CHECKBOX && label && (
-            <FormLabel className="shad-input-label">{label}</FormLabel>
+            <FormLabel className="shad-input-label">
+              {label}{" "}
+              {required && <span className="font-bold text-red-700">*</span>}
+            </FormLabel>
           )}
           <RenderInput field={field} props={props} />
 

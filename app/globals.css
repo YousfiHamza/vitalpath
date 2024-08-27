@@ -61,7 +61,7 @@
   }
 
   .header {
-    @apply text-32-bold md:text-36-bold;
+    @apply text-32-bold lg:text-36-bold;
   }
 
   .sub-header {
@@ -77,7 +77,7 @@
   }
 
   .side-img {
-    @apply hidden h-screen object-cover md:block;
+    @apply hidden w-[888px] object-cover md:block;
   }
 
   .copyright {

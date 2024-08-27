@@ -25,15 +25,25 @@ export const createUser = async (user: CreateUserParams) => {
       user.name,
     );
 
+    console.log("newuser", newuser);
+
     return parseStringify(newuser);
   } catch (error: any) {
     // Check existing user
     if (error && error?.code === 409) {
-      const documents = await Promise.any([
-        users.list([Query.equal("phone", [user.phone ?? ""])]),
-        users.list([Query.equal("email", [user.email ?? ""])]),
+      const byPhone = await users.list([
+        Query.equal("phone", [user.phone ?? ""]),
       ]);
-      return documents.users[0];
+      if (byPhone.users[0]) {
+        return byPhone.users[0];
+      } else {
+        const byEmail = await users.list([
+          Query.equal("email", [user.email ?? ""]),
+        ]);
+        if (byEmail.users[0]) {
+          return byEmail.users[0];
+        }
+      }
     }
     console.error(
       "An error occurred while creating a new user at createUser():",

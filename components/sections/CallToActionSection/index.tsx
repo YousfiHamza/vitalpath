@@ -37,6 +37,7 @@ export function CallToActionSection() {
           alt="logo"
           width={75}
           height={75}
+          loading="lazy"
         />
       </motion.div>
 
