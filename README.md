@@ -46,7 +46,7 @@
 </linearGradient>
 </defs>
 </svg>
-<span style="font-size:5rem; font-family: inter; font-weight: bold; color: green;">VitalPath</span>
+<span style="font-size:5rem; font-weight: bold; color: green;">VitalPath</span>
 
 </div>
 
