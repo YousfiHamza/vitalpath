@@ -24,10 +24,11 @@ export function HowToSection() {
               src="/assets/images/how-to/login.jpg"
               width={777}
               height={666}
-              sizes="(min-width: 400px) 333, (min-width: 768px) 555, 777"
+              sizes="(min-width: 400px) 555, (min-width: 768px) 777, 333"
               style={{
                 objectFit: "contain",
               }}
+              loading="lazy"
             />
           </div>
           <p className="text-theme my-8 text-xs font-normal md:text-base">
@@ -50,10 +51,11 @@ export function HowToSection() {
               src="/assets/images/how-to/register.jpg"
               width={777}
               height={666}
-              sizes="(min-width: 400px) 333, (min-width: 768px) 555, 777"
+              sizes="(min-width: 400px) 555, (min-width: 768px) 777, 333"
               style={{
                 objectFit: "contain",
               }}
+              loading="lazy"
             />
           </div>
         </div>
@@ -79,10 +81,11 @@ export function HowToSection() {
               src="/assets/images/how-to/new-appointment.jpg"
               width={777}
               height={666}
-              sizes="(min-width: 400px) 333, (min-width: 768px) 555, 777"
+              sizes="(min-width: 400px) 555, (min-width: 768px) 777, 333"
               style={{
                 objectFit: "contain",
               }}
+              loading="lazy"
             />
           </div>
         </div>
@@ -110,10 +113,11 @@ export function HowToSection() {
               src="/assets/images/how-to/admin.jpg"
               width={777}
               height={666}
-              sizes="(min-width: 400px) 333, (min-width: 768px) 555, 777"
+              sizes="(min-width: 400px) 555, (min-width: 768px) 777, 333"
               style={{
                 objectFit: "contain",
               }}
+              loading="lazy"
             />
           </div>
         </div>

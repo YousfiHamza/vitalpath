@@ -15,7 +15,7 @@ export default async function AppointmentPage({
   return (
     <div className="flex min-h-screen">
       <div className="remove-scrollbar container my-auto">
-        <div className="sub-container min-h-screen max-w-[496px]">
+        <div className="sub-container my-auto min-h-screen max-w-[567px] md:max-h-[80vh]">
           <Link href="/" className="flex h-10 w-fit items-center gap-2 md:mb-4">
             <Image
               src="/assets/icons/logo-icon.svg"
@@ -48,7 +48,7 @@ export default async function AppointmentPage({
       </div>
 
       <Image
-        src="/assets/images/appointment-img.png"
+        src="/assets/images/appointment-img-2.jpg"
         height={1000}
         width={1000}
         alt="patient"

@@ -129,6 +129,7 @@ export default function RegisterForm({ user }: { user: User }) {
             placeholder="Tyler durden"
             iconSrc="/assets/icons/user.svg"
             iconAlt="user"
+            required
           />
 
           {/* EMAIL & PHONE */}
@@ -141,6 +142,7 @@ export default function RegisterForm({ user }: { user: User }) {
               placeholder="tylerdurden@fc.com"
               iconSrc="/assets/icons/email.svg"
               iconAlt="email"
+              required
             />
 
             <CustomFormField
@@ -149,6 +151,7 @@ export default function RegisterForm({ user }: { user: User }) {
               name="phone"
               label="Phone Number"
               placeholder="(555) 123-4567"
+              required
             />
           </div>
 
@@ -198,6 +201,7 @@ export default function RegisterForm({ user }: { user: User }) {
               name="address"
               label="Address"
               placeholder="14 street, New york, NY - 5101"
+              required
             />
 
             <CustomFormField
@@ -206,6 +210,7 @@ export default function RegisterForm({ user }: { user: User }) {
               name="occupation"
               label="Occupation"
               placeholder=" Software Engineer"
+              required
             />
           </div>
 
@@ -217,6 +222,7 @@ export default function RegisterForm({ user }: { user: User }) {
               name="emergencyContactName"
               label="Emergency contact name"
               placeholder="Guardian's name"
+              required
             />
 
             <CustomFormField
@@ -225,6 +231,7 @@ export default function RegisterForm({ user }: { user: User }) {
               name="emergencyContactNumber"
               label="Emergency contact number"
               placeholder="(555) 123-4567"
+              required
             />
           </div>
         </section>
@@ -241,6 +248,7 @@ export default function RegisterForm({ user }: { user: User }) {
             name="primaryPhysician"
             label="Primary care physician"
             placeholder="Select a physician"
+            required
           >
             {Doctors.map((doctor, i) => (
               <SelectItem key={doctor.name + i} value={doctor.name}>
@@ -268,6 +276,7 @@ export default function RegisterForm({ user }: { user: User }) {
               name="insuranceProvider"
               label="Insurance provider"
               placeholder="BlueCross BlueShield"
+              required
             />
 
             <CustomFormField
@@ -276,6 +285,7 @@ export default function RegisterForm({ user }: { user: User }) {
               name="insurancePolicyNumber"
               label="Insurance policy number"
               placeholder="ABC123456789"
+              required
             />
           </div>
 
@@ -372,6 +382,7 @@ export default function RegisterForm({ user }: { user: User }) {
             control={form.control}
             name="treatmentConsent"
             label="I consent to receive treatment for my health condition."
+            required
           />
 
           <CustomFormField
@@ -380,6 +391,7 @@ export default function RegisterForm({ user }: { user: User }) {
             name="disclosureConsent"
             label="I consent to the use and disclosure of my health
             information for treatment purposes."
+            required
           />
 
           <CustomFormField
@@ -388,6 +400,7 @@ export default function RegisterForm({ user }: { user: User }) {
             name="privacyConsent"
             label="I acknowledge that I have reviewed and agree to the
             privacy policy"
+            required
           />
         </section>
 

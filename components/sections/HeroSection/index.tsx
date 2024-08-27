@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { CalendarArrowDown, PlayIcon } from "lucide-react";
+import { CalendarArrowDown, ListOrdered } from "lucide-react";
 
 import Waves from "@/public/assets/icons/waves.svg";
 
@@ -67,7 +67,7 @@ export default function HeroSection() {
               href="#how-it-works"
               className="inline-flex items-center rounded px-8 py-[14px] text-base hover:font-semibold hover:underline"
             >
-              <PlayIcon className="mr-2" />
+              <ListOrdered className="mr-2" />
               How it Works
             </Link>
           </motion.div>

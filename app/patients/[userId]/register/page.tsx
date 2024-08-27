@@ -58,14 +58,14 @@ export default async function RegisterPage({
           </div>
         </div>
       </section>
-
-      <Image
-        src="/assets/images/register-img.png"
-        height={1000}
-        width={1000}
-        alt="patient"
-        className="side-img max-w-[390px]"
-      />
+      <div
+        className="side-img max-w-[40%] self-stretch"
+        style={{
+          backgroundImage: `url(/assets/images/register-img.png)`,
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat",
+        }}
+      ></div>
     </div>
   );
 }

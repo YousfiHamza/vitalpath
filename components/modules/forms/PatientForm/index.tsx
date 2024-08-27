@@ -99,6 +99,8 @@ export const PatientForm = () => {
         phone: values.phone !== "" ? values.phone : undefined,
       };
 
+      console.log("user", user);
+
       const newUser = await createUser(user);
 
       if (newUser) {
@@ -120,8 +122,7 @@ export const PatientForm = () => {
         <div className="my-8 space-y-1 md:space-y-2">
           <h1 className="header">Hi There 👋</h1>
           <p className="text-theme italic opacity-75">
-            Get started by creating an account
-            <br />- or login to an existing account
+            You are one step away from scheduling your appointment!
           </p>
         </div>
 
